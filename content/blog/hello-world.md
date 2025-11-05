@@ -7,7 +7,7 @@ tags: ["Nuxt", "Blog", "Tailwind"]
 
 欢迎来到我的新博客！
 
-这是基于 **Nuxt 4**、**TailwindCSS** 与 **@nuxt/content** 构建的内容网站，风格参考了优秀程序员鱼皮的简洁大气路线，在此基础上加入了一些极客元素与深色霓虹配色。
+这是基于 **Nuxt 4**、**TailwindCSS** 与 **@nuxt/content** 构建的内容网站，风格参考了优秀程序员的简洁大气路线，在此基础上加入了一些极客元素与深色霓虹配色。
 
 ```ts
 export default defineNuxtConfig({
