@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/icon'
   ],
   app: {
+    baseURL: process.env.GITHUB_PAGES === 'true' ? '/geek-blog/' : '/',
     head: {
       title: 'Yangle · 极客风个人博客',
       meta: [
@@ -20,6 +21,7 @@ export default defineNuxtConfig({
     }
   },
   nitro: {
+    preset: 'github-pages',
     prerender: {
       crawlLinks: true
     }
@@ -38,7 +40,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      siteUrl: 'https://example.com'
+      siteUrl: process.env.SITE_URL || 'https://yangle594.github.io/geek-blog'
     }
   }
 })

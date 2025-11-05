@@ -23,7 +23,11 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npm run generate
+      - name: Generate static site
+        run: npm run generate
+        env:
+          GITHUB_PAGES: true
+          SITE_URL: https://yangle594.github.io/geek-blog
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .output/public
