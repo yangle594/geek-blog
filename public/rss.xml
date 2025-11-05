@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Yangle · 博客</title>
+    <link>https://example.com/</link>
+    <description>极客风个人博客</description>
+    <item>
+      <title>Hello World · 博客上线</title>
+      <link>https://example.com/blog/hello-world</link>
+      <guid isPermaLink="true">https://example.com/blog/hello-world</guid>
+      <pubDate>Wed, 05 Nov 2025 00:00:00 GMT</pubDate>
+      <description>用 Nuxt 4 + @nuxt/content 构建的极客风个人博客上线了。</description>
+    </item>
+  </channel>
+  </rss>
+
