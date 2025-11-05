@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/icon'
   ],
   app: {
-    baseURL: process.env.GITHUB_PAGES === 'true' ? '/geek-blog/' : '/',
+    // GitHub Pages 子路径部署
+    baseURL: '/geek-blog/',
     head: {
       title: 'Yangle · 极客风个人博客',
       meta: [
@@ -16,7 +17,8 @@ export default defineNuxtConfig({
         { name: 'description', content: '极客风格·简洁大气·新颖的个人博客' }
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
+        // 使用相对路径以配合 <base href> 前缀
+        { rel: 'icon', type: 'image/svg+xml', href: 'favicon.svg' }
       ]
     }
   },
@@ -37,6 +39,10 @@ export default defineNuxtConfig({
         dark: 'github-dark'
       }
     }
+  },
+  experimental: {
+    // 避免在子路径下抓取 /_payload.json 的 404 问题
+    payloadExtraction: false
   },
   runtimeConfig: {
     public: {
